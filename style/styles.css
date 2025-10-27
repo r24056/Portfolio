@@ -10,7 +10,7 @@ body {
   border-radius: 10px;
 }
 
-.menu-btn {
+.list-btn {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -23,7 +23,7 @@ body {
   background-color: #463926;
 }
 
-.menu-btn span {
+.list-btn span {
   content: '';
   display: block;
   height: 3px;
@@ -33,7 +33,7 @@ body {
   position: absolute;
 }
 
-.menu-btn span::before {
+.list-btn span::before {
   content: '';
   display: block;
   height: 3px;
@@ -44,7 +44,7 @@ body {
   bottom: 8px;
 }
 
-.menu-btn span::after {
+.list-btn span::after {
   content: '';
   display: block;
   height: 3px;
@@ -55,45 +55,47 @@ body {
   top: 8px;
 }
 
-#menu-btn-check:checked ~ .menu-btn span {
+#list-btn-check:checked ~ .list-btn span {
   background-color: rgba(255, 255, 255, 0);
   /* メニューオープン時は真ん中の線を透明にする */
 }
 
-#menu-btn-check:checked ~ .menu-btn span::before {
+#list-btn-check:checked ~ .list-btn span::before {
   bottom: 0;
   transform: rotate(45deg);
 }
 
-#menu-btn-check:checked ~ .menu-btn span::after {
+#list-btn-check:checked ~ .list-btn span::after {
   top: 0;
   transform: rotate(-45deg);
 }
 
-#menu-btn-check {
+#list-btn-check {
   display: none;
 }
 
-.menu-content {
-  width: 100%;
+.list-content {
+  width: 50%;
   height: 100%;
   position: fixed;
   top: 0;
-  left: 0;
+  right: -50%;
   z-index: 80;
-  background-color: #3584bb;
+  background-color: #463926;
+  transition: all 0.5s;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
 }
 
-.menu-content ul {
+.list-content ul {
   padding: 70px 10px 0;
 }
 
-.menu-content ul li {
+.list-content ul li {
   border-bottom: solid 1px #ffffff;
   list-style: none;
 }
 
-.menu-content ul li a {
+.list-content ul li a {
   display: block;
   width: 100%;
   font-size: 15px;
@@ -104,7 +106,7 @@ body {
   position: relative;
 }
 
-.menu-content ul li a::before {
+.list-content ul li a::before {
   content: "";
   width: 7px;
   height: 7px;
@@ -116,6 +118,13 @@ body {
   top: 16px;
 }
 
+#list-btn-check:checked ~ .list-content {
+  right: 0;
+}
+
 h1 {
+  color: #463926;
+}
+h2 {
   color: #463926;
 }

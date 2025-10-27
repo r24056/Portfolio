@@ -11,7 +11,7 @@ body {
   border-radius: 10px;
 }
 
-.menu-btn {
+.list-btn {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -56,7 +56,7 @@ body {
   }
 }
 
-#menu-btn-check:checked ~ .menu-btn {
+#list-btn-check:checked ~ .list-btn {
   span {
     background-color: rgba(255, 255, 255, 0); /* メニューオープン時は真ん中の線を透明にする */
 
@@ -72,28 +72,30 @@ body {
   }
 }
 
-#menu-btn-check {
+#list-btn-check {
     display: none;
 }
 
 
-.menu-content {
-    width: 100%;
+.list-content {
+    width: 50%;
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    right: -50%;
     z-index: 80;
-    background-color: #3584bb;
+    background-color: #463926;
+    transition: all 0.5s;
+    box-shadow: -2px 0 4px rgba(0,0,0,0.2);
 }
-.menu-content ul {
+.list-content ul {
     padding: 70px 10px 0;
 }
-.menu-content ul li {
+.list-content ul li {
     border-bottom: solid 1px #ffffff;
     list-style: none;
 }
-.menu-content ul li a {
+.list-content ul li a {
     display: block;
     width: 100%;
     font-size: 15px;
@@ -103,7 +105,7 @@ body {
     padding: 9px 15px 10px 0;
     position: relative;
 }
-.menu-content ul li a::before {
+.list-content ul li a::before {
     content: "";
     width: 7px;
     height: 7px;
@@ -115,6 +117,9 @@ body {
     top: 16px;
 }
 
+#list-btn-check:checked ~ .list-content {
+    right: 0;
+}
 
 h1 {
   color: #463926;
