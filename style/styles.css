@@ -1,10 +1,7 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'x12y16pxMaruMonica';
-  src: url("fonts/MaruMonica.woff2") format("woff2"), url("fonts/MaruMonica.woff") format("woff"), url("fonts/MaruMonica.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-family: "x12y16pxMaruMonica";
+  src: url("./X12Y16PXMARUMONICA.ttf") format("truetype");
 }
 
 body {
