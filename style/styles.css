@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'MaruMonica';
+  src: url("fonts/MaruMonica.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #958e80;
   font-family: "x12y16pxMaruMonica", sans-serif;
@@ -123,8 +130,5 @@ body {
 }
 
 h1 {
-  color: #463926;
-}
-h2 {
   color: #463926;
 }
